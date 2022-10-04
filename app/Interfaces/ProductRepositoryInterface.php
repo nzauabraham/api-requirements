@@ -2,7 +2,9 @@
 
 namespace App\Interfaces;
 
+use Illuminate\Http\Request;
+
 interface ProductRepositoryInterface
 {
-    public function getAllProducts($category, $min_price, $max_price);
+    public function getAllProducts(Request $request);
 }

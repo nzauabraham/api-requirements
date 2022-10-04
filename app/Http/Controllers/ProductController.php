@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Interfaces\ProductRepositoryInterface;
 use App\Models\Product;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -20,12 +21,13 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return JsonResponse
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
         return response()->json([
-            'products' => $this->productRepository->getAllProducts()
+            'products' => $this->productRepository->getAllProducts($request)
         ]);
     }
 
