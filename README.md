@@ -15,11 +15,14 @@
 - Run composer install
 - Run php artisan migrate to create table
 - Run php artisan migrate --seed to create product entries
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Usage
+- To get all Products: /products
+- To specify a category: /products?category=vehicle
+- To define a category and minimum price range /products?category=vehicle&minprice=70000
+- To define a category, minim price range a maximum price range: /products?category=vehicle&minprice=70000&maxprice=100000
+
+Built using Laravel
 
 ## Learning Laravel
 
